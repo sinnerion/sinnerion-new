@@ -1,6 +1,36 @@
 .main {
+  flex-grow: 2;
   margin-bottom: 1rem;
   .grid-item {
     margin-bottom: calc(2vh);
   }
+}
+
+.main-section {
+  border-bottom: 2px solid lighten($dark-txt, 5%);
+}
+
+.photo {
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  img {
+    object-fit: contain;
+    border-radius: .5rem;
+  }
+}
+
+.socials {
+  text-align: center;
+  a {
+    font-size: 2.4rem;
+    color: $dark-txt;
+    padding: .5rem;
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+.about-description {
+  font-size: 2rem;
 }

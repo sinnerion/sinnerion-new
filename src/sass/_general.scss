@@ -10,8 +10,32 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: $main-color;
+  font-size: 1.4rem;
+  color: $dark-txt;
+  font-family: Helvetica, Tahoma, Calibri, sans-serif;
 }
 
-.main {
-  flex-grow: 2;
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin: 0 0 1rem;
 }

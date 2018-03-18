@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "html5shiv": "^3.7.3",
-    "normalize.css": "^8.0.0"
+    "normalize.css": "^8.0.0",
+    "ionicons": "^3.0.0"
   }
 }

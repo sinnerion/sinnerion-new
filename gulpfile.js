@@ -25,16 +25,11 @@ gulp.task('browserSync', function () {
 
 gulp.task('sass', function () {
   gulp.src('src/sass/**/*.scss')
+      .pipe(plumber())
       .pipe(sass())
-      .pipe(plumber({
-        errorHandler: function (error) {
-          console.log(error.message);
-          this.emit('end');
-        }
-      }))
       .pipe(autoprefixer('last 10 versions'))
       .pipe(gulp.dest('src/css'))
-      .pipe(browserSync.reload({stream: true}));
+      .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('images', function () {
