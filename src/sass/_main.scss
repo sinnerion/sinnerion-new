@@ -8,7 +8,10 @@
 
 .main-section {
   border-bottom: 2px solid lighten($dark-txt, 5%);
+  margin-bottom: 1rem;
 }
+
+/* About */
 
 .photo {
   border-radius: .5rem;
@@ -33,4 +36,11 @@
 
 .about-description {
   font-size: 2rem;
+}
+
+/* Summary */
+
+.summary-title {
+  font-size: 2rem;
+  margin-bottom: .5rem;
 }
