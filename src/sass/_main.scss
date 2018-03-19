@@ -40,7 +40,53 @@
 
 /* Summary */
 
+.summary {
+
+}
+
 .summary-title {
   font-size: 2rem;
   margin-bottom: .5rem;
+}
+
+/* Portfolio */
+
+.portfolio-item {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 0 1rem;
+  background: darken($main-color, 15%);
+  img {
+    width: 100%;
+    vertical-align: middle;
+  }
+  &_description {
+    position: absolute;
+    bottom: calc(44px - 35%);
+    left: 0;
+    width: 100%;
+    height: 35%;
+    padding: 0 .5rem;
+    transition: bottom .2s, background .3s;
+    background: rgba(50,50,50,.6);
+    color: $light-txt;
+  }
+  &_description a {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: $light-txt;
+    text-decoration: none;
+    line-height: 2;
+    margin-bottom: 1rem;
+  }
+}
+
+.portfolio-item:hover {
+  .portfolio-item_description {
+    bottom: 0;
+    background: $dark-txt;
+    box-shadow: 0 0 2rem darken($dark-txt, 15%);
+  }
 }

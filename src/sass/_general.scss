@@ -16,6 +16,14 @@ body {
   font-family: Helvetica, Tahoma, Calibri, sans-serif;
 }
 
+a {
+  color: $dark-txt;
+  &:hover {
+    text-decoration: none;
+    color: $accent-color;
+  }
+}
+
 .text-center {
   text-align: center !important;
 }

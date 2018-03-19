@@ -162,61 +162,7 @@
   }
 }
 
-@media only screen and (min-width: 1025px) {
-  .grid-item.l12 {
-    flex: 0 0 100% !important;
-  }
-
-  .grid-item.l11 {
-    flex: 0 0 calc(99% / 12 * 11) !important;
-  }
-
-  .grid-item.l10 {
-    flex: 0 0 calc(99% / 12 * 10) !important;
-  }
-
-  .grid-item.l9 {
-    flex: 0 0 calc(99% / 12 * 9) !important;
-  }
-
-  .grid-item.l8 {
-    flex: 0 0 calc(99% / 12 * 8) !important;
-  }
-
-  .grid-item.l7 {
-    flex: 0 0 calc(99% / 12 * 7) !important;
-  }
-
-  .grid-item.l6 {
-    flex: 0 0 calc(99% / 12 * 6) !important;
-  }
-
-  .grid-item.l5 {
-    flex: 0 0 calc(99% / 12 * 5) !important;
-  }
-
-  .grid-item.l4 {
-    flex: 0 0 calc(99% / 12 * 4) !important;
-  }
-
-  .grid-item.l3 {
-    flex: 0 0 calc(99% / 12 * 3) !important;
-  }
-
-  .grid-item.l2 {
-    flex: 0 0 calc(99% / 12 * 2) !important;
-  }
-
-  .grid-item.l1 {
-    flex: 0 0 calc(99% / 12 * 1) !important;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  .grid {
-    width: calc(100% - 10rem);
-  }
-
+@media only screen and (min-width: 1367px) {
   .grid-item.h12 {
     flex: 0 0 100% !important;
   }
@@ -266,7 +212,61 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+  .grid {
+    width: calc(100% - 10rem);
+  }
+
+  .grid-item.l12 {
+    flex: 0 0 100% !important;
+  }
+
+  .grid-item.l11 {
+    flex: 0 0 calc(99% / 12 * 11) !important;
+  }
+
+  .grid-item.l10 {
+    flex: 0 0 calc(99% / 12 * 10) !important;
+  }
+
+  .grid-item.l9 {
+    flex: 0 0 calc(99% / 12 * 9) !important;
+  }
+
+  .grid-item.l8 {
+    flex: 0 0 calc(99% / 12 * 8) !important;
+  }
+
+  .grid-item.l7 {
+    flex: 0 0 calc(99% / 12 * 7) !important;
+  }
+
+  .grid-item.l6 {
+    flex: 0 0 calc(99% / 12 * 6) !important;
+  }
+
+  .grid-item.l5 {
+    flex: 0 0 calc(99% / 12 * 5) !important;
+  }
+
+  .grid-item.l4 {
+    flex: 0 0 calc(99% / 12 * 4) !important;
+  }
+
+  .grid-item.l3 {
+    flex: 0 0 calc(99% / 12 * 3) !important;
+  }
+
+  .grid-item.l2 {
+    flex: 0 0 calc(99% / 12 * 2) !important;
+  }
+
+  .grid-item.l1 {
+    flex: 0 0 calc(99% / 12 * 1) !important;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
   .grid {
     width: calc(100% - 2rem);
   }
