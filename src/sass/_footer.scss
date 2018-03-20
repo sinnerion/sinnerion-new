@@ -1,0 +1,11 @@
+.footer {
+  background: lighten($dark-txt, 15%);
+  text-align: center;
+  .up-btn {
+    display: inline-block;
+    padding: 0 1rem;
+    line-height: 2;
+    font-size: 3rem;
+    color: $light-txt;
+  }
+}
