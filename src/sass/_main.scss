@@ -54,7 +54,7 @@
 /* Portfolio */
 
 .portfolio {
-  background: $dark-txt;
+  background: lighten($dark-txt, 10%);
 }
 
 .portfolio-item {

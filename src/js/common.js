@@ -7,10 +7,14 @@ window.onload = function () {
     });
     document.querySelector('.main-nav').classList.toggle('main-nav__active');
   });
-
+  // Dynamic age
   function get_current_age(date) {
     return ((new Date().getTime() - new Date(date)) / (24 * 3600 * 365.25 * 1000)) | 0;
   }
   document.querySelectorAll('.age').forEach(function (element) { element.innerHTML = get_current_age('1992-04-19') });
+  // Up-btn
+  const upBtn = document.querySelector('.up-btn');
+  upBtn.addEventListener('click', function () {
 
+  });
 };
