@@ -55,6 +55,7 @@
 
 .portfolio {
   background: lighten($dark-txt, 10%);
+  padding-bottom: 5rem;
 }
 
 .portfolio-item {
@@ -64,7 +65,7 @@
   overflow: hidden;
   margin: 0 0 1rem;
   background: darken($main-color, 15%);
-  max-height: 400px;
+  height: 400px;
   transition: transform .2s;
   img {
     width: 100%;

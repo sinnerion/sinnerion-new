@@ -1,11 +1,20 @@
 .footer {
-  background: lighten($dark-txt, 15%);
+  background: rgba(50,50,50,.65);
   text-align: center;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: background .2s;
+  &:hover {
+    background: rgba(50,50,50,1);
+  }
   .up-btn {
-    display: inline-block;
+    display: block;
     padding: 0 1rem;
-    line-height: 2;
-    font-size: 3rem;
+    line-height: 1.5;
+    font-size: 3.5rem;
     color: $light-txt;
   }
 }

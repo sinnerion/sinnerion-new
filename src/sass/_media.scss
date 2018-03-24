@@ -77,6 +77,11 @@
   .about-description {
     font-size: 1.5rem;
   }
+  .portfolio-item_description {
+    bottom: 0;
+    background: $dark-txt;
+    box-shadow: 0 0 2rem darken($dark-txt, 15%);
+  }
 }
 
 @media only screen and (max-width: 600px) {
