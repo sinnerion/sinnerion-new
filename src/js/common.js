@@ -58,37 +58,12 @@ window.onload = function () {
   const upBtn = document.querySelector('.up-btn');
   const footer = document.querySelector('.footer');
 
-  // Fade function
-  function fadeOut(el) {
-    el.style.opacity = 1;
-
-    (function fade() {
-      if ((el.style.opacity -= .1) < 0) {
-        el.style.display = "none";
-      } else {
-        requestAnimationFrame(fade);
-      }
-    })();
-  }
-
-  function fadeIn(el, display) {
-    el.style.opacity = 0;
-    el.style.display = display || "block";
-
-    (function fade() {
-      var val = parseFloat(el.style.opacity);
-      if (!((val += .1) > 1)) {
-        el.style.opacity = val;
-        requestAnimationFrame(fade);
-      }
-    })();
-  }
   window.addEventListener('scroll', function upBtnFade() {
     var currentScroll = this.pageYOffset;
     if (currentScroll > 200) {
-      fadeIn(footer);
+      footer.style.display = "block";
     } else {
-      fadeOut(footer);
+      footer.style.display = "none";
     }
   });
   upBtn.addEventListener('click', function () {
