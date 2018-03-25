@@ -8,6 +8,9 @@
 .main-section {
   border-bottom: 2px solid lighten($dark-txt, 5%);
   padding: 2rem 0;
+  &:focus {
+    outline: none;
+  }
   &:last-child {
     border-bottom: 0;
   }

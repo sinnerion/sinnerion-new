@@ -49,12 +49,20 @@ gulp.task('css:minify', function () {
       .pipe(gulp.dest('dist/'));
 });
 
+gulp.task('html', function () {
+  return gulp.src('src/*.html').pipe(gulp.dest('dist'));
+});
+
 gulp.task('fonts', function () {
   return gulp.src('src/fonts/**/*').pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('js', function () {
   return gulp.src('src/js/**/*').pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('showcase', function () {
+  return gulp.src('src/showcase').pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function () {
@@ -68,7 +76,7 @@ gulp.task('clearcache', function () {
 });
 
 gulp.task('build', function (callback) {
-  runSequence('clean:dist', 'sass', 'css:minify', 'showcase', ['fonts', 'images'], callback);
+  return runSequence('sass', 'css:minify', 'html', ['showcase', 'fonts', 'images'], callback);
 });
 
 

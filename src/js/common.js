@@ -40,6 +40,7 @@ window.onload = function () {
   // Main-nav
   const mainNavToggle = document.querySelector('.main-nav_toggle');
   mainNavToggle.addEventListener('click', function () {
+    this.classList.toggle('main-nav_toggle__active');
     this.querySelectorAll('i').forEach(function (value) {
       value.classList.toggle('hidden');
     });
