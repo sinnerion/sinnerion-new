@@ -33,6 +33,9 @@
     font-size: 2.8rem;
     padding: 0 1rem;
   }
+  a:hover {
+    background: lighten($dark-txt, 5%);
+  }
 }
 
 .main-nav.main-nav__active {
