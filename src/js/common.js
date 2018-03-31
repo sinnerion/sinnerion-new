@@ -194,4 +194,5 @@ window.onload = function () {
 
   }
 
+  var myLazyLoad = new LazyLoad();
 };

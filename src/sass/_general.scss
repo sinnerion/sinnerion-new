@@ -44,6 +44,10 @@ img {
   max-width: 100%;
 }
 
+img:not([src]) {
+  visibility: hidden;
+}
+
 p {
   margin: 0 0 1rem;
 }
