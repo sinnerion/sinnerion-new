@@ -5,6 +5,7 @@ const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 const cache = require('gulp-cache');
 const cleanCss = require('gulp-clean-css');
+const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
 const pngout = require('imagemin-pngout');
 const autoprefixer = require('gulp-autoprefixer');
@@ -29,7 +30,7 @@ gulp.task('sass', function () {
       .pipe(sass())
       .pipe(autoprefixer('last 10 versions'))
       .pipe(gulp.dest('src/css'))
-      .pipe(browserSync.reload({ stream: true }));
+      .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('images', function () {
@@ -57,8 +58,29 @@ gulp.task('fonts', function () {
   return gulp.src('src/fonts/**/*').pipe(gulp.dest('dist/fonts'));
 });
 
+gulp.task('babel', function () {
+  gulp.src('src/js/common.js')
+      .pipe(babel({
+        "presets": [
+          ["env", {
+            "targets": {
+              "browsers": [
+                "Chrome >= 52",
+                "FireFox >= 44",
+                "Safari >= 7",
+                "Explorer 11",
+                "last 4 Edge versions"
+              ]
+            }
+          }]
+        ]
+      }))
+      .pipe(gulp.dest('dist/js'))
+});
+
+
 gulp.task('js', function () {
-  return gulp.src('src/js/**/*').pipe(gulp.dest('dist/js'));
+  return gulp.src('src/js/libs/**/*').pipe(gulp.dest('dist/js/libs'));
 });
 
 gulp.task('showcase', function () {
@@ -76,7 +98,7 @@ gulp.task('clearcache', function () {
 });
 
 gulp.task('build', function (callback) {
-  return runSequence('sass', 'css:minify', 'js', 'html', ['showcase', 'fonts', 'images'], callback);
+  return runSequence('sass', 'css:minify', 'babel', 'js', 'html', ['showcase', 'fonts', 'images'], callback);
 });
 
 
