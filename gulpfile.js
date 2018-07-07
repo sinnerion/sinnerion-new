@@ -7,7 +7,9 @@ const cache = require('gulp-cache');
 const cleanCss = require('gulp-clean-css');
 const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
+const htmlmin = require('gulp-htmlmin');;
 const pngout = require('imagemin-pngout');
+const purgecss = require('gulp-purgecss');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
 const runSequence = require('run-sequence');
@@ -47,11 +49,14 @@ gulp.task('images', function () {
 gulp.task('css:minify', function () {
   return gulp.src('src/css/*.css')
       .pipe(cleanCss({compatibility: 'ie8'}))
+      .pipe(purgecss({content: ['src/**/*.html', 'src/js/**/*.js']}))
       .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('html', function () {
-  return gulp.src('src/*.html').pipe(gulp.dest('dist'));
+  return gulp.src('src/*.html')
+      .pipe(htmlmin({collapseWhitespace: true}))
+      .pipe(gulp.dest('dist'));
 });
 
 gulp.task('fonts', function () {
