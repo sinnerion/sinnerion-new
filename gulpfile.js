@@ -64,7 +64,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('babel', function () {
-  gulp.src('src/js/common.js')
+  return gulp.src('src/js/common.js')
       .pipe(babel({
         "presets": [
           ["env", {
@@ -103,7 +103,7 @@ gulp.task('clearcache', function () {
 });
 
 gulp.task('build', function (callback) {
-  return runSequence('sass', 'css:minify', 'babel', 'js', 'html', ['showcase', 'fonts', 'images'], callback);
+  return runSequence('sass', 'css:minify', 'babel', 'js', 'html', 'showcase', 'fonts', 'images', callback);
 });
 
 
