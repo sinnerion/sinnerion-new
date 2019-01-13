@@ -1,39 +1,36 @@
 {
-  "name": "bevza",
+  "name": "sinnerion",
   "version": "1.0.0",
-  "description": "bevza markup",
+  "description": "sinnerion markup",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sinnerion/brandly.git"
+    "url": "git+https://github.com/sinnerion/sinnerion-new.git"
   },
   "author": "sinnerion",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sinnerion/brandly/issues"
-  },
-  "homepage": "https://github.com/sinnerion/brandly#readme",
+  "bugs": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.17.5",
+    "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^7.0.1",
-    "gulp-cache": "^0.4.5",
-    "gulp-clean-css": "^2.0.13",
-    "gulp-concat": "^2.6.0",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-imagemin": "^3.1.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-purgecss": "^1.0.0",
-    "gulp-rsync": "0.0.7",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^2.0.0",
-    "imagemin-pngout": "^2.0.0",
+    "gulp-cache": "^1.1.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-purgecss": "^1.1.1",
+    "gulp-rsync": "^0.0.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "imagemin-pngout": "^4.0.0",
     "run-sequence": "^2.2.1"
   },
   "dependencies": {

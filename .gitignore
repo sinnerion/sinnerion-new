@@ -1,5 +1,3 @@
-.idea/inspectionProfiles/
-.idea/modules.xml
-.idea/sinnerion-new.iml
-.idea/workspace.xml
+.idea
 dist
+node_modules
