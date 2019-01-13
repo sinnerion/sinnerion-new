@@ -4710,4 +4710,6 @@ nav ul li a {
     .main-nav li a {
       font-size: 1.8rem;
       line-height: 40px;
-      text-align: left; } }
+      text-align: left; }
+  .portfolio-item_description {
+    height: auto; } }

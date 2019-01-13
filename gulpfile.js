@@ -37,13 +37,8 @@ gulp.task('sass', function () {
 
 gulp.task('images', function () {
   gulp.src('src/img/**/*')
-      .pipe(cache(imagemin({
-        interlaced: true,
-        progressive: true,
-        svgoPlugins: [{removeViewBox: false}],
-        use: [pngout()]
-      })))
-      .pipe(gulp.dest('dist/img'));
+  .pipe(imagemin())
+  .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('css:minify', function () {
